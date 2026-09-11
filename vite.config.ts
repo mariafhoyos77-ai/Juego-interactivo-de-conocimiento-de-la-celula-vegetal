@@ -12,6 +12,13 @@ const __dirname = path.dirname(__filename);
 export default defineConfig({
   // base relativa para que funcione en cualquier subruta (p. ej. GitHub Pages)
   base: "./",
+  server: {
+    // permitir cualquier host en previsualizaciones proxy
+    allowedHosts: true,
+  },
+  preview: {
+    allowedHosts: true,
+  },
   plugins: [react(), tailwindcss(), viteSingleFile()],
   resolve: {
     alias: {
